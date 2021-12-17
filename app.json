@@ -1,0 +1,33 @@
+{
+  "name": "Python personal APP",
+  "description": "A Python app using Flask",
+  "repository": "https://github.com/BluestarCo/MyApp",
+  "image": "heroku/python",
+  "env": {
+    "FLASK_APP": {
+      "description": "APP",
+      "value": "main.py"
+    },
+    "FLASK_RUN_RELOAD": {
+      "description": "RELOAD",
+      "value": "True"
+    },
+    "FLASK_ENV": {
+      "description": "ENV",
+      "value": "production"
+    },
+    "FLASK_DEBUG": {
+      "description": "DEBUG",
+      "value": "False"
+    },
+    "FLASK_RUN_EXTRA_FILES": {
+      "description": "EXTRA",
+      "value": "touch.txt"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}

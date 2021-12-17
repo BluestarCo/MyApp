@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: myapp-oregon
+    env: python
+    region: oregon #frankfurt
+    buildCommand: python -m pip install -r requirements.txt
+    startCommand: python -m flask run
+    plan: free
+    envVars:
+      - key: FLASK_APP
+        value: main.py
+      - key: FLASK_RUN_RELOAD
+        value: True
+      - key: FLASK_ENV
+        value: production
+      - key: FLASK_DEBUG
+        value: False
+      - key: FLASK_RUN_EXTRA_FILES
+        value: touch.txt
